@@ -1,6 +1,6 @@
 from random import randint
 from copy import deepcopy
-from tile import Tile, plains, forests, mountains, water
+from ..__init__ import Tile, plains, forests, mountains, water
 
 class Map:
     def __init__(self, width: int, height: int) -> None:

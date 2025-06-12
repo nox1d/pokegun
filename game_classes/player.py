@@ -1,5 +1,3 @@
-from map import Map
-
 class Player:
     def __init__(self, name: str, health: int) -> None:
         self.name = name

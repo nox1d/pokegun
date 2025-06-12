@@ -2,8 +2,8 @@ from textual.app import App, ComposeResult
 from textual.widgets import Button, Header, Footer, Static
 from textual.reactive import reactive
 
-from start_menu import StartMenu
-from __init__ import Map, Player, player_tile
+from game_screens import StartMenu
+from game_classes import Map, Player, player_tile
 
 class MapWidget(Static):
     """A widget to display the game map."""

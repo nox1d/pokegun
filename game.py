@@ -2,15 +2,9 @@ from textual.app import App, ComposeResult
 from textual.widgets import Button, Header, Footer, Static
 from textual.reactive import reactive
 
-from game_screens import StartMenu
 from game_classes import Map, Player, player_tile
-
-class MapWidget(Static):
-    
-    map_data = reactive("")
-
-    def watch_map_data(self, new_map_data: str) -> None:
-        self.update(new_map_data)
+from game_screens import StartMenu
+from game_widgets import MapWidget
 
 
 class GameApp(App):

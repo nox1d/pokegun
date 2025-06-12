@@ -6,16 +6,10 @@ from game_screens import StartMenu
 from game_classes import Map, Player, player_tile
 
 class MapWidget(Static):
-    """A widget to display the game map."""
     
-    # 2. Use a "reactive" variable. When this variable changes,
-    # Textual will automatically call the `watch_map_data` method.
     map_data = reactive("")
 
-    # 3. This "watch" method is triggered when `self.map_data` is changed.
-    # Its job is to update what the widget displays.
     def watch_map_data(self, new_map_data: str) -> None:
-        """Called when the map_data reactive is changed."""
         self.update(new_map_data)
 
 
@@ -49,7 +43,6 @@ class GameApp(App):
         yield Footer()
 
     def on_mount(self) -> None:
-        # self.push_screen("StartMenu")
         self.update_map_display()
     
     def update_map_display(self) -> None:
@@ -71,10 +64,8 @@ class GameApp(App):
         elif direction == "right":
             dx = 1
 
-        # Use our player's move logic
         self.player.move(dx, dy)
 
-        # After moving, update the display
         self.update_map_display()
 
 
